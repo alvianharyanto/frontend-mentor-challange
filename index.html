@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor Challange | Solutions by Alvian</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-info">
+        <h1 class="t-h1">Frontend Mentor Challenges Solutions</h1>
+        <p class="t-h2">By <a href="http://alvianharyanto.com" target="_blank">Alvian
+            Haryanto</a></p>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div id="app">
+        <section class="latest-solutions">
+          <h2>Latest solutions</h2>
+          <ul class="solutions">
+            <li class="solution" v-for="solution in solutions.slice().reverse()">
+              <a v-bind:href="solution.liveViewLink" target="_blank">
+                <div class="solution__image">
+                  <img v-bind:src="solution.previewImageLink" alt="solution preview">
+                </div>
+                <div class="solution__info">
+                  <div class="solution__info__techstack">
+                    <div v-for="techStack in solution.techStacks" class="tag" v-bind:class="techStack">{{ techStack }}
+                    </div>
+                  </div>
+                  <p class="t-project-name solution__info__project-name">{{ solution.projectName }}</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+
+</html>

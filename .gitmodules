@@ -1,0 +1,21 @@
+[submodule "Article-preview-component"]
+	path = Article-preview-component
+	url = https://github.com/alvianharyanto/Article-preview-component.git
+[submodule "faq-accordion-card-main"]
+	path = faq-accordion-card-main
+	url = https://github.com/alvianharyanto/Accordion-Card-.git
+[submodule "ping-coming-soon-page-master"]
+	path = ping-coming-soon-page-master
+	url = https://github.com/alvianharyanto/Ping-coming-soon-page.git
+[submodule "socian-media-dasboard"]
+	path = socian-media-dasboard
+	url = https://github.com/alvianharyanto/Frontend-Mentor---Social-proof-section.git
+[submodule "social-media-dasboard"]
+	path = social-media-dasboard
+	url = https://github.com/alvianharyanto/Frontend-Mentor---Social-proof-section.git
+[submodule "social-proof-section-master"]
+	path = social-proof-section-master
+	url = https://github.com/alvianharyanto/Frontend-Mentor---Social-proof-section.git
+[submodule "media-social-dasboard"]
+	path = media-social-dasboard
+	url = https://github.com/alvianharyanto/media-social-dasboard.git

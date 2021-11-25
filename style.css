@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+:root {
+  --color-black: #2d3440;
+  --color-gray: #6c757d;
+  --color-dark-gray: #343a40;
+  --color-white: #fff;
+
+  --weight-light: 200;
+  --weight-regular: 400;
+  --weight-bold: 700;
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-black);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-dark-gray);
+}
+
+/* Type specs */
+.t-h1 {
+  font-size: 2.4rem;
+  font-weight: var(--weight-bold);
+}
+
+.t-h2 {
+  font-weight: var(--weight-bold);
+  color: var(--color-gray);
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.t-h2 a {
+    color: var(--color-gray);
+}
+
+.t-h2 a:hover {
+    text-decoration: underline;
+}
+
+.t-project-name {
+  font-weight: var(--weight-bold);
+}
+
+.t-body {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.t-gray {
+  color: var(--color-gray);
+}
+
+/* Containers */
+.main .container,
+.header .container {
+  max-width: 111rem;
+  width: 87.5%;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .main .container,
+  .header .container {
+    width: 90%;
+  }
+}
+@media (min-width: 960px) {
+  .main .container,
+  .header .container {
+    width: 95%;
+  }
+}
+
+/* Header */
+.header {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.main {
+  padding: 5rem 0;
+}
+
+/* Highlighted solutions section  */
+.highlighted-solutions {
+  margin-bottom: 7rem;
+}
+
+/* Solutions */
+.solutions {
+  display: grid;
+  gap: 5rem;
+  margin-top: 1.6rem;
+}
+@media (min-width: 520px) {
+  .solutions {
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1080px) {
+  .solutions {
+    gap: 5rem 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Solution card */
+.solution {
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1.5rem 0 rgba(0, 0, 0, 0.05);
+  transition: 500ms ease-in-out box-shadow;
+}
+
+.solution:hover {
+  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.solution__image {
+  overflow: hidden;
+  height: 24rem;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.solution__image img {
+  width: 100%;
+  object-fit: cover;
+  height: 24rem;
+  transition: 300ms ease-in-out transform;
+  border-radius: .5rem .5rem 0 0;
+  transform: scale(1.03);
+  object-position: 50% 50%;
+}
+
+.solution:hover .solution__image img {
+  transform: scale(1);
+}
+
+.solution__info {
+  padding: 2.4rem;
+}
+
+.solution__info__techstack {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.solution__info__techstack .tag:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.solution__info__project-name {
+  margin-top: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+
+.tag {
+  font-weight: var(--weight-bold);
+  line-height: 2.4rem;
+}
+
+.tag.HTML {
+  color: rgb(106, 190, 205);
+}
+.tag.CSS {
+  color: rgb(62, 84, 163);
+}
+.tag.JS {
+  color: rgb(225, 55, 132);
+}
+.tag.API {
+  color: rgb(237, 44, 73);
+}
+.tag.ReactJs {
+    color: #ff3e00;
+  }
+.tag.Svelte {
+  color: #ff3e00;
+}
+.tag.Sapper {
+  color: rgb(21, 151, 148);
+}
+
+.solution__info__links {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+}
